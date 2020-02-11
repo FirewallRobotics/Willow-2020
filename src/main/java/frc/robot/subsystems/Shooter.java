@@ -91,11 +91,20 @@ public class Shooter extends Subsystem {
             Turret.set(RobotMap.TURRET_SPEED);
         }
         else if (moveCounterClockwise){
-            Turret.set (-0.25);
+            Turret.set (-RobotMap.TURRET_SPEED);
         }
         else {
             Turret.set (0);
         }
     }
 
+    public static void shoot(boolean shoot) {
+        if (shoot) {
+            Shooter.set(0.25);
+            Shooter2.set(0.25);
+        } else {
+            Shooter.set(0);
+            Shooter2.set(0);
+        }
+    }
 }

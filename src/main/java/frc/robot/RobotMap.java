@@ -38,10 +38,13 @@ public class RobotMap {
     public static int SECOND_INDEXER_ADDRESS          = 2;
     public static int THIRD_INDEXER_ADDRESS           = 3;
     
-    // Other constants
+    // Speed constants
     public static double DRIVETRAIN_DEADBAND          = 0.26;
     public static double TURRET_SPEED                 = 0.25;
+    public static double INTAKER_MOTOR_SPEED          = 0.5;
     
+    // DIO constants
+    public static int INTAKER_SWITCH                  = 0;
 
     public static void init() {
 

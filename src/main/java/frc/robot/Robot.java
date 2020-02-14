@@ -15,6 +15,7 @@ import edu.wpi.first.hal.FRCNetComm.tInstances;
 import edu.wpi.first.hal.FRCNetComm.tResourceType;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.hal.HAL;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -33,7 +34,8 @@ import frc.robot.subsystems.*;
  */
 public class Robot extends TimedRobot {
 
-    Command autonomousCommand;
+    public static final DoubleSolenoid firstSolenoid = null;
+	Command autonomousCommand;
     SendableChooser<Command> chooser = new SendableChooser<>();
     String driveString;
     SendableChooser<String> driveChooser = new SendableChooser<>();

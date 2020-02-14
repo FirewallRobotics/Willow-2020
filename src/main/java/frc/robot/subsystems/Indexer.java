@@ -68,15 +68,6 @@ public class Indexer extends Subsystem {
 
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-    //Index with no balls we are going to keep the conveyor running until we pick up a ball.
-    //We will then read when the sensor is hit and stop the conveyor every time and repeat 
-    //until we go to shoot the balls. Intake proccess after intake will be automatic.
-    public void index() {
-
-    }
-    public void flush() {
-
-    }
 
 }
 

@@ -66,10 +66,10 @@ public class Indexer extends Subsystem {
     @Override
     public void periodic() {
         SmartDashboard.putBoolean("Button1.get", Button1.get());
-        SmartDashboard.putBoolean("Button2.get", Button1.get());
-        SmartDashboard.putBoolean("Button3.get", Button1.get());
-        SmartDashboard.putBoolean("Button4.get", Button1.get());
-        SmartDashboard.putBoolean("Button5.get", Button1.get());
+        SmartDashboard.putBoolean("Button2.get", Button2.get());
+        SmartDashboard.putBoolean("Button3.get", Button3.get());
+        SmartDashboard.putBoolean("Button4.get", Button4.get());
+        SmartDashboard.putBoolean("Button5.get", Button5.get());
 
         // Put code here to be run every loop
 

@@ -68,6 +68,9 @@ public class Elevator extends Subsystem {
 
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-
+    public static void testMotors(double motorSpeed) {
+        //leftMaster.set(motorSpeed);
+        //rightMaster.set(motorSpeed);
+    }
 }
 

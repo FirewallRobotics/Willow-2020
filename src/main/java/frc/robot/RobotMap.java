@@ -41,7 +41,7 @@ public class RobotMap {
     // Other constants
     public static double DRIVETRAIN_DEADBAND          = 0.26;
     public static double TURRET_SPEED                 = 0.25;
-    
+    public static double MOTOR_TEST_SPEED             = 0.5;
 
     public static void init() {
 

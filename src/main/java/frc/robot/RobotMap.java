@@ -43,9 +43,16 @@ public class RobotMap {
     public static double TURRET_SPEED                 = 0.25;
     public static double MOTOR_TEST_SPEED             = 0.5;
     public static double INTAKER_MOTOR_SPEED          = 0.5;
+    public static double INDEXER_CONVEYOR_SPEED       = 0.25;
+    public static double FLUSH_CONVEYOR_SPEED         = 0.25;
     
     // DIO constants
     public static int INTAKER_SWITCH                  = 0;
+    public static int INDEXER_SWITCH_1                = 1;
+    public static int INDEXER_SWITCH_2                = 2;
+    public static int INDEXER_SWITCH_3                = 3;
+    public static int INDEXER_SWITCH_4                = 4;
+    public static int INDEXER_SWITCH_5                = 5;
 
     public static void init() {
 

@@ -98,18 +98,14 @@ public class Shooter extends Subsystem {
         }
     }
 
-    public static void shoot(boolean shoot) {
-        if (shoot) {
+    public static void shoot(double triggerAxis) {
             Shooter.set(0.25);
             Shooter2.set(0.25);
-        } else {
-            Shooter.set(0);
-            Shooter2.set(0);
-        }
-    }
+        }    
     public static void testMotors(double motorSpeed) {
         Turret.set(motorSpeed);
         Shooter.set(motorSpeed);
         Shooter2.set(motorSpeed);
-    }    
+    }
+	    
 }

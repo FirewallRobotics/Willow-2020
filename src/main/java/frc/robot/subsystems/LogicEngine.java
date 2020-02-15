@@ -68,7 +68,7 @@ public class LogicEngine extends Subsystem {
             // MiniWillow
             DriveTrain.Drive(controller1.getY(GenericHID.Hand.kLeft),-controller1.getX(GenericHID.Hand.kRight),controller1.getBumperPressed(GenericHID.Hand.kRight));
             Shooter.moveTurret(controller2.getBumper(GenericHID.Hand.kLeft),controller2.getBumper(GenericHID.Hand.kRight));
-            Shooter.shoot(controller2.getAButton());
+            Shooter.shoot(controller2.getTriggerAxis(Hand.kLeft));
             if(controller2.getStartButton()) {
                 DriveTrain.testMotors(RobotMap.MOTOR_TEST_SPEED);
                 Indexer.testMotors(RobotMap.MOTOR_TEST_SPEED);

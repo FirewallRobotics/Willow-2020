@@ -91,31 +91,32 @@ public class Indexer extends Subsystem {
     //We will then read when the sensor is hit and stop the conveyor every time and repeat 
     //until we go to shoot the balls. Intake proccess after intake will be automatic.
     public void index() {
-        if (Button5.get()){
+        //because the buttons return false when pressed, we have to use the ! before every button get
+        if (!Button5.get()){
             spark1.set(0);
             spark2.set(0);
             spark3.set(0);
             numberCellsInIndexer = 5;
         }
-        else if (Button4.get() && numberCellsInIndexer == 3){
+        else if (!Button4.get() && numberCellsInIndexer == 3){
             spark1.set(0);
             spark2.set(0);
             spark3.set(0);
             numberCellsInIndexer = 4;
         }
-        else if (Button3.get() && numberCellsInIndexer == 2){
+        else if (!Button3.get() && numberCellsInIndexer == 2){
             spark1.set(0);
             spark2.set(0);
             spark3.set(0);
             numberCellsInIndexer = 3;
         }
-        else if (Button2.get() && numberCellsInIndexer == 1){
+        else if (!Button2.get() && numberCellsInIndexer == 1){
             spark1.set(0);
             spark2.set(0);
             spark3.set(0);
             numberCellsInIndexer = 2;
         }
-        else if (Button1.get() && numberCellsInIndexer == 0){
+        else if (!Button1.get() && numberCellsInIndexer == 0){
             spark1.set(0);
             spark2.set(0);
             spark3.set(0);

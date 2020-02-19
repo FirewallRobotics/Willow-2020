@@ -79,12 +79,12 @@ public class LogicEngine extends Subsystem {
                 }
             }
             if (testmode==true) {
-                DriveTrain.testMotors(RobotMap.MOTOR_TEST_SPEED);
+                //DriveTrain.testMotors(RobotMap.MOTOR_TEST_SPEED);
                 Indexer.testMotors(RobotMap.MOTOR_TEST_SPEED);
                 Intake.testMotors(RobotMap.MOTOR_TEST_SPEED);
                 Elevator.testMotors(RobotMap.MOTOR_TEST_SPEED);
                 Shooter.testMotors(RobotMap.MOTOR_TEST_SPEED);
-
+                DriveTrain.testNanoVision();
             }
 
     }

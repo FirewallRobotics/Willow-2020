@@ -29,8 +29,8 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
  *
  */
 public class Intake extends Subsystem {
-    //private static Spark spark = new Spark(RobotMap.INTAKER_ADDRESS);
-    //private static Spark intakeMotor = new Spark(RobotMap.INTAKER_ADDRESS);
+    private static Spark spark = new Spark(RobotMap.INTAKER_ADDRESS);
+    private static Spark intakeMotor = new Spark(RobotMap.INTAKER_ADDRESS);
     private static DigitalInput intakeSwitch = new DigitalInput(RobotMap.INTAKER_SWITCH);
     private static DoubleSolenoid firstSolenoid = Robot.firstSolenoid;
 
@@ -73,16 +73,20 @@ public class Intake extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
     public static void testMotors(double motorSpeed) {
-        //spark.set(motorSpeed);
+        spark.set(motorSpeed);
     }
 
     public void intakePowerCell() {
         if (!intakeSwitch.get()){
-            //intakeMotor.set(RobotMap.INTAKER_MOTOR_SPEED);
+            intakeMotor.set(RobotMap.INTAKER_MOTOR_SPEED);
         }
         else{
-            //intakeMotor.set(0);
+            intakeMotor.set(0);
         }
+    }
+
+    public static void extendSolenoid() {
+    	  firstSolenoid.set(DoubleSolenoid.Value.kForward);
     }
 
     public static void retractSolenoid() {

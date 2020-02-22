@@ -4,11 +4,11 @@ import frc.robot.Robot;
 public class IntakeCommand extends Command {
 
     public IntakeCommand() {
-       requires(Robot.intake);// drivetrain is an instance of our Drivetrain subsystem
+       requires(Robot.intake);// intake is needed to intake the ball
     }
 
     protected void initialize() {
-        Robot.intake.extendSolenoid()
+        Robot.intake.extendSolenoid();
     }
 
     /*
@@ -17,7 +17,7 @@ public class IntakeCommand extends Command {
      * (for example, if we want the joysticks to be less sensitive, we can multiply them by .5 in the getLeftSpeed method and leave our command the same).
      */
     protected void execute() {
-       Robot.intake.intakePowerCell()
+       Robot.intake.intakePowerCell();
     }
 
     /*

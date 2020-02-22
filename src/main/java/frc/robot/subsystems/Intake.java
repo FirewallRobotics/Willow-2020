@@ -86,9 +86,9 @@ public class Intake extends Subsystem {
     }
 
     public static void extendSolenoid() {
-    	  firstSolenoid.set(DoubleSolenoid.Value.kForward);
+        firstSolenoid.set(DoubleSolenoid.Value.kForward);
     }
-
+    
     public static void retractSolenoid() {
     	  firstSolenoid.set(DoubleSolenoid.Value.kReverse);
     }

@@ -132,5 +132,11 @@ public class Indexer extends Subsystem {
         spark2.set(RobotMap.INDEXER_CONVEYOR_SPEED);
         spark3.set(RobotMap.INDEXER_CONVEYOR_SPEED);
     }
+
+	public void stop() {
+        spark1.set(0);
+        spark2.set(0);
+        spark3.set(0);
+	}
 }
 

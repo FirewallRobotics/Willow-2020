@@ -1,30 +1,33 @@
 package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
-import frc.robot.Robot;
-public class IntakeCommand extends Command {
+import edu.wpi.first.wpilibj.GenericHID;
 
-    public IntakeCommand() {
-       requires(Robot.intake);// intake is needed to intake the ball
+import frc.robot.Robot;
+import frc.robot.subsystems.Shooter;
+
+public class ShooterManualCommand extends Command {
+
+    public ShooterManualCommand() {
+        requires(Robot.shooter);// shooter is required to shoot the ball
     }
 
     protected void initialize() {
-        Robot.intake.extendSolenoid();
     }
 
     /*
-     * execute() - In our execute method we call a tankDrive method we have created in our subsystem. This method takes two speeds as a parameter which we get from methods in the OI class.
-     * These methods abstract the joystick objects so that if we want to change how we get the speed later we can do so without modifying our commands
-     * (for example, if we want the joysticks to be less sensitive, we can multiply them by .5 in the getLeftSpeed method and leave our command the same).
+     * execute() - In our execute method we call a moveTurret() method and the shoot() method.
      */
     protected void execute() {
-       Robot.intake.intakePowerCell();
+        Shooter.moveTurret(Robot.oi.get2ndXboxController().getBumper(GenericHID.Hand.kLeft),
+                           Robot.oi.get2ndXboxController().getBumper(GenericHID.Hand.kRight));
+        Shooter.shoot(Robot.oi.get2ndXboxController().getTriggerAxis(GenericHID.Hand.kLeft));
     }
 
     /*
      * isFinished - Our isFinished method always returns false meaning this command never completes on it's own. The reason we do this is that this command will be set as the default command for the subsystem. This means that whenever the subsystem is not running another command, it will run this command. If any other command is scheduled it will interrupt this command, then return to this command when the other command completes.
      */
     protected boolean isFinished() {
-        return  (Robot.intake.getButtonState());
+        return false;
     }
 
     protected void end() {

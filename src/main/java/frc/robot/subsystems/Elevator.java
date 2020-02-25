@@ -72,5 +72,13 @@ public class Elevator extends Subsystem {
         //leftMaster.set(motorSpeed);
         //rightMaster.set(motorSpeed);
     }
+
+    public static void extendArms() {
+
+    }
+
+    public static void retractArms() {
+        
+    }
 }
 

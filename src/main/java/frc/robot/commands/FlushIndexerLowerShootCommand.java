@@ -3,15 +3,15 @@ import edu.wpi.first.wpilibj.command.TimedCommand;
 import frc.robot.Robot;
 import frc.robot.subsystems.Indexer;
 
-public class FlushIndexerCommand extends TimedCommand {
+public class FlushIndexerLowerShootCommand extends TimedCommand {
 
-    public FlushIndexerCommand(double timeout) {
+    public FlushIndexerLowerShootCommand(double timeout) {
         super(timeout);
         requires(Robot.indexer);// indexer is needed to intake the ball
     }
 
     protected void initialize() {
-        Indexer.flush();
+        Indexer.flushRunLowerShooter();
     }
 
     protected void end() {

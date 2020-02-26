@@ -51,7 +51,25 @@ public class DriveTrain extends Subsystem {
     private static NetworkTableEntry x = table.getEntry("X");
     private static NetworkTableEntry y = table.getEntry("Y");
     private static NetworkTableEntry radius = table.getEntry("R");
-
+    private static NetworkTable goalTable = inst.getTable("goal");
+    private static NetworkTableEntry goalX = goalTable.getEntry("X");
+    private static NetworkTableEntry goalY = goalTable.getEntry("Y");
+    private static NetworkTableEntry goalRadius = goalTable.getEntry("R");
+    
+    public static double goalMaxRadius = 195;
+    private static double goalMinRadius = 10;
+    private static double goalMaxOutR = 1;
+    private static double goalMinOutR = -1;
+    private static double goalNeutralOffSetR = 0.25;
+    private static double goalPGainR = 0.250;
+    private static double goalMaxX = 300;
+    private static double goalMinX = 10;
+    private static double goalMaxx = 1;
+    private static double goalMinx = -1;
+    private static double goalNeutralOffSetX = 0;
+    private static double goalPGainX = 0.25;
+    private static double goalScaledX = 0;
+    public static double goalScaledRadius = 0;
     public static double MaxRadius = 195;
     private static double MinRadius = 10;
     private static double MaxOutR = 1;
@@ -98,7 +116,8 @@ public class DriveTrain extends Subsystem {
 
     @Override
     public void periodic() {
-        // Put code here to be run every loop
+        SmartDashboard.putNumber("goalScaledX", goalScaledX);
+        SmartDashboard.putNumber("goalScaledRadius",goalScaledRadius);
         SmartDashboard.putNumber("ScaledX", ScaledX);
         SmartDashboard.putNumber("ScaledRadius",ScaledRadius);
 
@@ -150,6 +169,22 @@ public class DriveTrain extends Subsystem {
     }
 
 	public void moveToShootingSpot() {
+        double X = Math.round(goalX.getDouble(-1));
+        double Radius = Math.round(goalRadius.getDouble(-1));
+        if (X == -1) {
+            goalScaledX = 0;
+            goalScaledRadius = 0;
+        } else {
+            goalScaledX = goalPGainX * ((((goalMaxx - goalMinx) * ((X - goalMinX) / (goalMaxX - goalMinX))) + goalMinx) - goalNeutralOffSetX);
+            goalScaledRadius =  goalPGainR * ((((goalMaxOutR - goalMinOutR)*((Radius - goalMinRadius)/(goalMaxRadius - goalMinRadius))) + goalMinOutR) -  goalNeutralOffSetR);
+        }
+        
+        Double LeftSpeed = (goalScaledRadius +  goalScaledX);
+        Double RightSpeed = -(goalScaledRadius -  goalScaledX);
+        //System.out.println("goalScaledX: "+ goalScaledX + " goalScaledRadius: " + goalScaledRadius);
+        //System.out.println("LeftSpeed: "+ LeftSpeed + " RightSpeed: " + RightSpeed);
+        leftMaster.set(ControlMode.PercentOutput,  -RightSpeed);
+        rightMaster.set(ControlMode.PercentOutput, -LeftSpeed);
 	}
 }
 

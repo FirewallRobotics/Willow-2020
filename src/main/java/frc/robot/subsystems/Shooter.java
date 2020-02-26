@@ -133,11 +133,10 @@ public class Shooter extends Subsystem {
     public static void shoot(double triggerAxis) {
             if (triggerAxis < RobotMap.LOW_JOY_SPEED) {
                 Shooter.set(0);
-                Shooter.set(ControlMode.Velocity, 23250);
                 //Shooter2.set(0);
             }
             else if (triggerAxis >= RobotMap.LOW_JOY_SPEED && triggerAxis <= RobotMap.FULL_JOY_SPEED) {
-                Shooter.set(RobotMap.LOW_SHOOTER_SPEED);
+                Shooter.set(ControlMode.Velocity, 23250);
                 //Shooter2.set(RobotMap.LOW_SHOOTER_SPEED);
             }
             else {

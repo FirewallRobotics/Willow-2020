@@ -85,6 +85,8 @@ public class OI {
         JoystickButton secondBack = new JoystickButton(secondController, XboxController.Button.kBack.value);
         JoystickButton secondStart = new JoystickButton(secondController, XboxController.Button.kStart.value);
 
+    //This is what the buttons do when they are pressed. First references the black xbox controller which drives
+    //second references the pink xbox controller which controls the shooter functions and the intake and indexer
         secondA.whenPressed(new CapturePowerCell());
         secondB.whenPressed(new ShootUpperPowerCells());
         secondStart.whenPressed(new ExtendIntake());

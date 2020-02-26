@@ -18,6 +18,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 //import edu.wpi.first.wpilibj.PIDOutput;
 //import edu.wpi.first.wpilibj.PIDSource;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
@@ -131,6 +133,7 @@ public class Shooter extends Subsystem {
     public static void shoot(double triggerAxis) {
             if (triggerAxis < RobotMap.LOW_JOY_SPEED) {
                 Shooter.set(0);
+                Shooter.set(ControlMode.Velocity, 23250);
                 //Shooter2.set(0);
             }
             else if (triggerAxis >= RobotMap.LOW_JOY_SPEED && triggerAxis <= RobotMap.FULL_JOY_SPEED) {

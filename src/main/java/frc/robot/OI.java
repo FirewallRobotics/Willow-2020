@@ -94,8 +94,8 @@ public class OI {
         secondStart.whenReleased(new RetractIntake());
         secondX.whenPressed(new FlushIndexerCommand(RobotMap.FLUSH_INDEXER_TIME));
         secondY.whenPressed(new StartShooterCommand());
-        secondStickRight.whenPressed(new LightUpLEDCommand());
-        secondStickLeft.whenPressed(new TurnOffLEDCommand());
+        secondBumperRight.whenPressed(new LightUpLEDCommand());
+        secondBumperLeft.whenPressed(new TurnOffLEDCommand());
         //secondStart.whenPressed();
         
         // SmartDashboard Buttons

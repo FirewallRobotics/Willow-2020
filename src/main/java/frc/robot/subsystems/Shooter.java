@@ -62,6 +62,7 @@ public class Shooter extends Subsystem {
         Shooter.setNeutralMode(NeutralMode.Coast);
         Shooter.setNeutralMode(NeutralMode.Coast);
         Shooter2.follow(Shooter);
+        ledRing.set(false);
         /* Config sensor used for Primary PID [Velocity] */
     Shooter.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative,
         RobotMap.kPIDLoopIdx, 

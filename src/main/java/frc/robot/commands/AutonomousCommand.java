@@ -43,12 +43,12 @@ public class AutonomousCommand extends CommandGroup {
        */
        addSequential(new DriveForwardCommand(RobotMap.AUTO_DRIVE_FORWARD_SPEED));
        addSequential(new LightUpLEDCommand());
-       addSequential(new TurnOffLEDCommand());
        addParallel(new ShooterMoveCommand());
        //addParallel(new adjustTurretCommand());
        addSequential(new StartShooterCommand());
        addSequential(new FlushIndexerCommand(RobotMap.FLUSH_INDEXER_TIME));
        addSequential(new StopShooter());
+       addSequential(new TurnOffLEDCommand());
     }
 
     // Called just before this Command runs the first time

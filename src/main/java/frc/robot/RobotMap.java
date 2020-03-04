@@ -71,6 +71,7 @@ public class RobotMap {
     public static double FLUSH_INDEXER_TIME           = 5.0;
     public static double EXTEND_ARMS_TIME             = 3.0;
     public static double AUTO_DRIVE_FORWARD_SPEED     = 0.30;
+    public static double SHOOT_TIMEOUT                = 6.5;
 
     //Which PID slot to pull gains from. Starting 2018, you can choose from
     //0,1,2 or 3. Only the first two (0,1) are visible in web-based configuration.

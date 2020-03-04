@@ -1,6 +1,7 @@
 package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
+import frc.robot.RobotMap;
 public class StartShooterCommand extends Command {
 
     public StartShooterCommand() {
@@ -8,6 +9,7 @@ public class StartShooterCommand extends Command {
     }
 
     protected void initialize() {
+        setTimeout(RobotMap.SHOOT_TIMEOUT);
     }
 
     /*
@@ -23,7 +25,7 @@ public class StartShooterCommand extends Command {
      * isFinished - Our isFinished method always returns false meaning this command never completes on it's own. The reason we do this is that this command will be set as the default command for the subsystem. This means that whenever the subsystem is not running another command, it will run this command. If any other command is scheduled it will interrupt this command, then return to this command when the other command completes.
      */
     protected boolean isFinished() {
-        return false;
+        return isTimedOut();
     }
 
     protected void end() {

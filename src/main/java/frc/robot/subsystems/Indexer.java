@@ -106,8 +106,7 @@ public class Indexer extends Subsystem {
         if (isFinished == true) {
             lowSpark.set(0);
             upperIntake.set(0);
-            
-            numberCellsInIndexer = 1;
+        
         }
         else {
             lowSpark.set(-RobotMap.INDEXER_CONVEYOR_SPEED);

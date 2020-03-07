@@ -111,8 +111,6 @@ public class OI {
         //secondX.whenPressed(new FlushIndexerCommand(RobotMap.FLUSH_INDEXER_TIME));
         secondY.whileHeld(new StartShooterCommand());
         secondY.whenReleased(new StopShooter());
-        secondBumperRight.whileHeld(new LightUpLEDCommand());
-        secondBumperRight.whenReleased(new TurnOffLEDCommand());
         secondBumperLeft.whenPressed(new ShootUpperPowerCells());
         //secondBumperLeft.whenReleased(new StopShooter());
         secondBack.whenPressed(new CapturePowerCell());

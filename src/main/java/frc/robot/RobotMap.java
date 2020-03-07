@@ -34,10 +34,11 @@ public class RobotMap {
     public static int PULLUP_ELEVATOR1_ADDRESS        = 8;
     public static int PULLUP_ELEVATOR2_ADDRESS        = 9;
     public static int INTAKE_VICTOR_ADDRESS           = 10;
+    public static int SECOND_INDEXER_ADDRESS          = 11;
 
     // PWM motor controllers
     public static int FIRST_INDEXER_ADDRESS           = 0;
-    public static int SECOND_INDEXER_ADDRESS          = 1;
+    //public static int SECOND_INDEXER_ADDRESS          = 1;
     public static int INTAKER_ADDRESS                 = 2;
     public static int FIRST_ELEVATOR_ADDRESS          = 3;
     public static int SECOND_ELEVATOR_ADDRESS         = 4;

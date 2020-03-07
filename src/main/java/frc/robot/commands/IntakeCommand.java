@@ -28,6 +28,7 @@ public class IntakeCommand extends Command {
     }
 
     protected void end() {
+        Robot.intake.stop();
     }
 
     protected void interrupted() {

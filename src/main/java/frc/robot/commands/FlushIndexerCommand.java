@@ -31,7 +31,7 @@ public class FlushIndexerCommand extends Command {
     }
 
     protected void end() {
-
+        Indexer.stop();
     }
 
     protected void interrupted() {

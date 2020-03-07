@@ -6,7 +6,7 @@ import frc.robot.subsystems.Intake;
 public class NewDriveForwardCommand extends Command {
 
     public NewDriveForwardCommand() {
-        requires(Robot.intake);// intake is needed to intake the ball
+        requires(Robot.driveTrain);
     }
 
     protected void initialize() {
@@ -19,7 +19,6 @@ public class NewDriveForwardCommand extends Command {
      */
     protected void execute() {
         Robot.driveTrain.driveAuto(.35, 0);
-        System.out.println("I'm driving");
     }
 
     /*

@@ -111,8 +111,8 @@ public class Indexer extends Subsystem {
         //}
     }
     public static void flush() {
-        lowSpark.set(RobotMap.INDEXER_CONVEYOR_SPEED);
-        upperSpark.set(RobotMap.UPPER_INDEXER_SPEED);
+        lowSpark.set(-RobotMap.INDEXER_CONVEYOR_SPEED);
+        upperSpark.set(-RobotMap.INDEXER_CONVEYOR_SPEED);
     }
 
     public static void flushRunLowerShooter() {

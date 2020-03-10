@@ -47,7 +47,7 @@ public class RobotMap {
     public static double DRIVETRAIN_DEADBAND          = 0.26;
     public static double TURRET_SPEED                 = 0.25;
     public static double MOTOR_TEST_SPEED             = 0.5;
-    public static double INTAKER_MOTOR_SPEED          = 1.0;
+    public static double INTAKER_MOTOR_SPEED          = .8;
     public static double INDEXER_CONVEYOR_SPEED       = -1.0;
     public static double FLUSH_CONVEYOR_SPEED         = 1.0;
     public static double UPPER_INDEXER_SPEED          = -1.0;

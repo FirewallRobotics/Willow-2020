@@ -94,7 +94,7 @@ public class Robot extends TimedRobot {
         driveChooser.addOption("CurvatureDrive", new String());
         driveChooser.addOption("TankDrive", new String());
         SmartDashboard.putData("DriveChoice", driveChooser);
-        autonomousCommand = new NewDriveForwardCommand();
+        autonomousCommand = new AutonomousShoot();
     }
 
     /**

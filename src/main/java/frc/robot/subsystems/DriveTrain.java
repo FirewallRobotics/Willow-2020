@@ -153,6 +153,9 @@ public class DriveTrain extends Subsystem {
     public static void testMotors(double motorSpeed) {
         m_myRobot.tankDrive(motorSpeed, motorSpeed);
     }
+    public static void stopDriving(double motorSpeed) {
+        m_myRobot.tankDrive(0, 0);
+    }
 
     public static void driveToPowerCell() {
         double X = Math.round(x.getDouble(-1));
@@ -169,8 +172,8 @@ public class DriveTrain extends Subsystem {
         Double RightSpeed = -(ScaledRadius -  ScaledX);
         //System.out.println("ScaledX: "+ ScaledX + " ScaledRadius: " + ScaledRadius);
         //System.out.println("LeftSpeed: "+ LeftSpeed + " RightSpeed: " + RightSpeed);
-        leftMaster.set(ControlMode.PercentOutput,  -RightSpeed);
-        rightMaster.set(ControlMode.PercentOutput, -LeftSpeed);
+        leftMaster.set(ControlMode.PercentOutput,  RightSpeed);
+        rightMaster.set(ControlMode.PercentOutput, LeftSpeed);
 
     }
 

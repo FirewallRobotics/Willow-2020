@@ -9,8 +9,8 @@ import frc.robot.Robot;
 public class AutonomousShoot extends CommandGroup {
 
     public AutonomousShoot() {
-        addParallel(new StartShooterCommand());
+        addSequential(new StartShooterCommand());
         addParallel(new FlushIndexerCommand());
-        //addSequential(new NewDriveForwardCommand());
+        addSequential(new NewDriveForwardCommand());
     }
 }

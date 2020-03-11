@@ -99,6 +99,7 @@ public class OI {
         //firstStart.whenPressed(new ClimbCommand());
         firstBack.whenPressed(new StopShooter());
         firstStickLeft.whenPressed(new ShooterMoveCommand());
+        firstStickRight.whenPressed(new FlushIndexerCommand());
         //xbox controller 2
         secondA.whileHeld(new IntakeCommand());
         secondA.whenReleased(new IntakeStopCommand());
@@ -110,11 +111,14 @@ public class OI {
         //secondBack.whenPressed(new IntakeCommand());
         secondStart.whenPressed(new RetractIntake());
         //secondX.whenPressed(new FlushIndexerCommand(RobotMap.FLUSH_INDEXER_TIME));
-        secondY.whileHeld(new StartShooterCommand());
+        secondY.whileHeld(new ShootUpperPowerCells());
         secondY.whenReleased(new StopShooter());
+        secondY.whenReleased(new StopIndexer());
         secondBumperLeft.whenPressed(new ShootUpperPowerCells());
         //secondBumperLeft.whenReleased(new StopShooter());
         secondBack.whenPressed(new CapturePowerCell());
+        secondBumperRight.whileHeld(new DriveToPowerCell());
+        secondBumperRight.whenReleased(new StopDriving());
         //secondStart.whenPressed();
         
         // SmartDashboard Buttons

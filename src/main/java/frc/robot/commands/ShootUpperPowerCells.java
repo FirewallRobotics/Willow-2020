@@ -11,8 +11,8 @@ public class ShootUpperPowerCells extends CommandGroup {
        //addSequential(new ShooterMoveCommand());
        //addParallel(new adjustTurretCommand());
        addParallel(new StartShooterCommand());
-       addParallel(new FlushIndexerCommand());
-       //addParallel(new TimedCommand(RobotMap.FLUSH_INDEXER_TIME));
+       addSequential(new TimedCommand(0.75));
+       addSequential(new FlushIndexerCommand());
        //addSequential(new TurnOffLEDCommand());
     }
 }

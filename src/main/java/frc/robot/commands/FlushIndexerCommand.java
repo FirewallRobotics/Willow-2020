@@ -3,6 +3,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 import frc.robot.RobotMap;
 import frc.robot.subsystems.Indexer;
+import edu.wpi.first.wpilibj.command.TimedCommand;
 
 public class FlushIndexerCommand extends Command {
 

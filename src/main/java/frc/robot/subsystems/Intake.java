@@ -124,6 +124,6 @@ public class Intake extends Subsystem {
 
 	public boolean finished() {
 		return getButtonState();
-	}
+    }
 }
 

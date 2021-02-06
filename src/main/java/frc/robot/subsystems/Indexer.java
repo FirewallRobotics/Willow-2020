@@ -36,6 +36,7 @@ public class Indexer extends Subsystem {
     private static DigitalInput Button1 = new DigitalInput(RobotMap.INDEXER_SWITCH_1);
     private static DigitalInput Button2 = new DigitalInput(RobotMap.INDEXER_SWITCH_2);
     private static DigitalInput Button3 = new DigitalInput(RobotMap.INDEXER_SWITCH_3);
+    //public static DigitalInput intakeSwitch = new DigitalInput(RobotMap.INTAKER_SWITCH);
     public static boolean isFinished = false;
     public static int numberCellsInIndexer = 0;
 
@@ -96,16 +97,22 @@ public class Indexer extends Subsystem {
             isFinished = true;
             numberCellsInIndexer = 1;
             System.out.println("Button1Pressed");
+            lowSpark.set(0);
+            upperIntake.set(0);
         }
-        else if (numberCellsInIndexer == 1 && (Button1.get() == false) && (Button2.get() == false)){
+        else if (numberCellsInIndexer == 1 && (Button2.get() == false)){
             isFinished = true;
             numberCellsInIndexer = 2;
             System.out.println("Button2Pressed");
+            lowSpark.set(0);
+            upperIntake.set(0);
         }
-        else if (numberCellsInIndexer == 2 && (Button1.get() == false) && (Button3.get() == false)){
+        else if (numberCellsInIndexer == 2 && (Button3.get() == false)){
             isFinished = true;
             numberCellsInIndexer = 3;
             System.out.println("Button3Pressed");
+            lowSpark.set(0);
+            upperIntake.set(0);
         }
         else {
             isFinished = false;

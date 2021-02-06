@@ -96,6 +96,7 @@ public class OI {
         firstBumperLeft.whileHeld(new ExtendArmsCommand());
         firstBumperLeft.whenReleased(new StopArmsCommand());
         firstBumperRight.whileHeld(new PullupCommand());
+        firstBumperRight.whenReleased(new StopArmsCommand());
         //firstStart.whenPressed(new ClimbCommand());
         firstBack.whenPressed(new StopShooter());
         firstStickLeft.whenPressed(new ShooterMoveCommand());
@@ -103,8 +104,9 @@ public class OI {
         //xbox controller 2
         secondA.whileHeld(new IntakeCommand());
         secondA.whenReleased(new IntakeStopCommand());
-        secondB.whileHeld(new IndexerCommand());
-        secondB.whenReleased(new StopIndexer());
+        secondB.whenPressed(new IndexerCommand());
+        //secondB.whileHeld(new IndexerCommand());
+        //secondB.whenReleased(new StopIndexer());
         secondX.whenPressed(new ExtendIntake());
         //secondY.whenPressed(new ShootUpperPowerCells());
         //secondBack.whenPressed(new ExtendIntake());

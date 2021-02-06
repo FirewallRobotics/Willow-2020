@@ -84,8 +84,8 @@ public class Elevator extends Subsystem {
     }
 
     public static void retractArms() {
-        pullupVictor1.set(.7);
-        pullupVictor2.set(.7);
+        pullupVictor1.set(.75);
+        pullupVictor2.set(.75);
     }
     public static void stopArms() {
         pullupVictor1.set(0);

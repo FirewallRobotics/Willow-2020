@@ -73,7 +73,6 @@ public class Indexer extends Subsystem {
         SmartDashboard.putBoolean("Button1.get", Button1.get());
         SmartDashboard.putBoolean("Button2.get", Button2.get());
         SmartDashboard.putBoolean("Button3.get", Button3.get());
-        //SmartDashboard.putBoolean("IntakeSwitch", intakeSwitch.get());
         SmartDashboard.putNumber("NumberCellsInIndexer", numberCellsInIndexer);
         // Put code here to be run every loop
 

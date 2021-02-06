@@ -101,7 +101,7 @@ public class OI {
         firstBack.whenPressed(new StopShooter());
         firstStickLeft.whenPressed(new ShooterMoveCommand());
         firstStickRight.whenPressed(new FlushIndexerCommand());
-        //xbox controller 2((
+        //xbox controller 2
         secondA.whileHeld(new IntakeCommand());
         secondA.whenReleased(new IntakeStopCommand());
         secondB.whenPressed(new IndexerCommand());

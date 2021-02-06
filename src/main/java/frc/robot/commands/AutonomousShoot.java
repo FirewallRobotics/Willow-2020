@@ -11,6 +11,6 @@ public class AutonomousShoot extends CommandGroup {
     public AutonomousShoot() {
         addSequential(new StartShooterCommand());
         addParallel(new FlushIndexerCommand());
-        addSequential(new NewDriveForwardCommand());
+        //addSequential(new NewDriveForwardCommand());
     }
 }
